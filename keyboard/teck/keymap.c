@@ -81,7 +81,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* 0: qwerty */
     KEYMAP_ANSI(
         ESC,    F1,     F2,     F3,     F4,     F5,     F6,     F7,     F8,     F9,     F10,    F11,    F12, \
-        NO,     NO,     BSLS,   NO,     NO,     CAPS,   FN0,    NLCK,   NO,     NO,     NO,     EQL,    RBRC, \
+        NO,     ESC,    BSLS,   NO,     NO,     CAPS,   FN0,    NLCK,   NO,     NO,     NO,     EQL,    RBRC, \
         GRV,    1,      2,      3,      4,      5,      LGUI,   6,      7,      8,      9,      0,      MINS, \
         SLASH,  Q,      W,      E,      R,      T,      DEL,    Y,      U,      I,      O,      P,      LBRC, \
         LSFT,   A,      S,      D,      F,      G,      TAB,    H,      J,      K,      L,      SCLN,   RSFT, \
