@@ -1,0 +1,1 @@
+make -f Makefile.pjrc && teensy-loader-cli -w -mmcu=atmega32u4 teck_pjrc.hex -v && sudo hid_listen
