@@ -90,7 +90,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     /* 1: first FN layer */
     KEYMAP_ANSI(
-        TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRMS,   TRNS,   F7,     F8,     F9,     F10,    F11,    F12, \
+        TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   F7,     F8,     F9,     F10,    F11,    F12, \
         TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   CAPS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS, \
         TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS, \
         TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS, \
