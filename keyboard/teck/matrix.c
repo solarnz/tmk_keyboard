@@ -68,13 +68,50 @@ void matrix_init(void)
     }
 }
 
+/*
+ *uint8_t matrix_scan(void)
+ *{
+ *    for (uint8_t i = 0; i < MATRIX_ROWS; i++) {
+ *        select_row(i);
+ *        _delay_us(30);  // without this wait read unstable value.
+ *        matrix[i] = read_cols();
+ *        unselect_rows();
+ *    }
+ *
+ *    return 1;
+ *}
+ */
+
 uint8_t matrix_scan(void)
 {
-    for (uint8_t i = 0; i < MATRIX_ROWS; i++) {
-        select_row(i);
-        _delay_us(30);  // without this wait read unstable value.
-        matrix[i] = read_cols();
+    for (uint8_t row_n = 0; row_n < MATRIX_ROWS; row_n++) {
+        select_row(row_n);
+        _delay_us(3);
+        matrix_row_t row = read_cols();
+
+        for (uint8_t col = 0; col < MATRIX_COLS; col++) {
+            bool prev_bit = matrix_debouncing[row_n] & ((matrix_row_t) 1 << col);
+            bool curr_bit = row & (1<<col);
+            if (prev_bit != curr_bit) {
+                matrix_debouncing[row_n] ^= ((matrix_row_t) 1 << col);
+                if (debouncing) {
+                    dprint("bounce!: "); dprintf("%02X", debouncing); dprintln();
+                }
+                debouncing = DEBOUNCE;
+            }
+        }
+
         unselect_rows();
+    }
+
+    if (debouncing) {
+        if (--debouncing) {
+            _delay_ms(1);
+        } else {
+            for (uint8_t i = 0; i < MATRIX_ROWS; i++) {
+                matrix[i] = matrix_debouncing[i];
+            }
+        }
     }
 
     return 1;
