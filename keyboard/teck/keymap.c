@@ -110,7 +110,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ENT,    QUOT,   DOT,    COMM,   M,      B,      V,      N,      LCTRL,  C,      Z,      X,      TAB, \
         LBRC,   P,      O,      I,      U,      T,      R,      Y,      DEL,    E,      Q,      W,      SLASH, \
         RSFT,   SCLN,   L,      K,      J,      G,      F,      H,      U,      D,      A,      S,      LSFT, \
-        EQL,    RBRC,   S,      D,      F,      G,      TAB,    H,      J,      K,      L,      ESC,    ESC, \
+        EQL,    RBRC,   S,      D,      F,      G,      TAB,    H,      J,      K,      BSLS,   ESC,    ESC, \
         TAB,    F12,    F11,    F10,    F9,     F6,     BSPC,   F8,     F7,     LGUI,   DOWN,   UP,     RIGHT, \
         MINS,   0,      9,      8,      7,      5,      4,      6,      LGUI,   3,      1,      2,      GRV  \
     ),
