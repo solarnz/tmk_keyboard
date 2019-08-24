@@ -106,7 +106,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Not sure what the key on the left of '~' is supposed to be. The key is C2,R2. */
     /* 0: qwerty */
     KEYMAP_ANSI(
-        ESC,    F1,     DOWN,   UP,     LEFT,   BSPC,   END,    SPC,    LGUI,   PGDN,   HOME,   PGUP,   LCTRL, \
+        RALT,   RIGHT,  DOWN,   UP,     LEFT,   BSPC,   END,    SPC,    LGUI,   PGDN,   HOME,   PGUP,   LCTRL, \
         ENT,    QUOT,   DOT,    COMM,   M,      B,      V,      N,      LCTRL,  C,      Z,      X,      TAB, \
         LBRC,   P,      O,      I,      U,      T,      R,      Y,      DEL,    E,      Q,      W,      SLASH, \
         RSFT,   SCLN,   L,      K,      J,      G,      F,      H,      U,      D,      A,      S,      LSFT, \
