@@ -76,17 +76,43 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #elif defined(KEYMAP_POKER_BIT)
     #include "keymap_poker_bit.h"
 #else
+/* work config */
+/*static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {*/
+    /*[> Not sure what the key on the left of '~' is supposed to be. The key is C2,R2. <]*/
+    /*[> 0: qwerty <]*/
+    /*KEYMAP_ANSI(*/
+        /*ESC,    F1,     F2,     F3,     F4,     F5,     F6,     MPRV,   MPLY,   MNXT,   MUTE,   VOLD,    VOLU, \*/
+        /*NO,     ESC,    BSLS,   NO,     NO,     NO,     FN0,    NLCK,   NO,     NO,     NO,     EQL,    RBRC, \*/
+        /*GRV,    1,      2,      3,      4,      5,      LGUI,   6,      7,      8,      9,      0,      MINS, \*/
+        /*SLASH,  Q,      W,      E,      R,      T,      DEL,    Y,      U,      I,      O,      P,      LBRC, \*/
+        /*LSFT,   A,      S,      D,      F,      G,      TAB,    H,      J,      K,      L,      SCLN,   RSFT, \*/
+        /*TAB,    Z,      X,      C,      V,      B,      RCTRL,  N,      M,      COMM,   DOT,    QUOT,   ENT, \*/
+        /*LCTRL,  HOME,   PGDN,   PGUP,   END,    BSPC,   LGUI,   SPC,    LEFT,   DOWN,   UP,     RIGHT,  RALT  \*/
+    /*),*/
+    /*[> 1: first FN layer <]*/
+    /*KEYMAP_ANSI(*/
+        /*TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   F7,     F8,     F9,     F10,    F11,    F12, \*/
+        /*TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   CAPS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS, \*/
+        /*TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS, \*/
+        /*TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS, \*/
+        /*TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS, \*/
+        /*TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS, \*/
+        /*TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS  \*/
+    /*)*/
+/*};*/
+
+/* home config */
 static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Not sure what the key on the left of '~' is supposed to be. The key is C2,R2. */
     /* 0: qwerty */
     KEYMAP_ANSI(
-        ESC,    F1,     F2,     F3,     F4,     F5,     F6,     MPRV,   MPLY,   MNXT,   MUTE,   VOLD,    VOLU, \
-        NO,     ESC,    BSLS,   NO,     NO,     NO,     FN0,    NLCK,   NO,     NO,     NO,     EQL,    RBRC, \
-        GRV,    1,      2,      3,      4,      5,      LGUI,   6,      7,      8,      9,      0,      MINS, \
-        SLASH,  Q,      W,      E,      R,      T,      DEL,    Y,      U,      I,      O,      P,      LBRC, \
-        LSFT,   A,      S,      D,      F,      G,      TAB,    H,      J,      K,      L,      SCLN,   RSFT, \
-        TAB,    Z,      X,      C,      V,      B,      RCTRL,  N,      M,      COMM,   DOT,    QUOT,   ENT, \
-        LCTRL,  HOME,   PGDN,   PGUP,   END,    BSPC,   LGUI,   SPC,    LEFT,   DOWN,   UP,     RIGHT,  RALT  \
+        ESC,    F1,     DOWN,   UP,     LEFT,   BSPC,   END,    SPC,    LGUI,   PGDN,   HOME,   PGUP,   LCTRL, \
+        ENT,    QUOT,   DOT,    COMM,   M,      B,      V,      N,      LCTRL,  C,      Z,      X,      TAB, \
+        LBRC,   P,      O,      I,      U,      T,      R,      Y,      DEL,    E,      Q,      W,      SLASH, \
+        RSFT,   SCLN,   L,      K,      J,      G,      F,      H,      U,      D,      A,      S,      LSFT, \
+        EQL,    RBRC,   S,      D,      F,      G,      TAB,    H,      J,      K,      L,      ESC,    ESC, \
+        TAB,    F12,    F11,    F10,    F9,     F6,     BSPC,   F8,     F7,     LGUI,   DOWN,   UP,     RIGHT, \
+        MINS,   0,      9,      8,      7,      5,      4,      6,      LGUI,   3,      1,      2,      GRV  \
     ),
     /* 1: first FN layer */
     KEYMAP_ANSI(
