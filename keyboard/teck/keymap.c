@@ -110,18 +110,18 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ENT,    QUOT,   DOT,    COMM,   M,      B,      V,      N,      LCTRL,  C,      Z,      X,      TAB, \
         LBRC,   P,      O,      I,      U,      T,      R,      Y,      DEL,    E,      Q,      W,      SLASH, \
         RSFT,   SCLN,   L,      K,      J,      G,      F,      H,      U,      D,      A,      S,      LSFT, \
-        EQL,    RBRC,   S,      D,      F,      G,      TAB,    H,      J,      K,      BSLS,   ESC,    ESC, \
-        TAB,    F12,    F11,    F10,    F9,     F6,     BSPC,   F8,     F7,     LGUI,   DOWN,   UP,     RIGHT, \
+        EQL,    RBRC,   S,      D,      F,      FN1,    TAB,    FN2,    FN0,    K,      BSLS,   ESC,    ESC, \
+        TAB,    VOLU,   VOLD,   MUTE,   MNXT,   F6,     BSPC,   MPLY,   MPRV,   LGUI,   DOWN,   UP,     RIGHT, \
         MINS,   0,      9,      8,      7,      5,      4,      6,      LGUI,   3,      1,      2,      GRV  \
     ),
     /* 1: first FN layer */
     KEYMAP_ANSI(
-        TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   F7,     F8,     F9,     F10,    F11,    F12, \
-        TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   CAPS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS, \
+        TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,\
         TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS, \
         TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS, \
         TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS, \
         TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS, \
+        TRNS,   F12,    F11,    F10,    F9,     TRNS,   TRNS,   F8,     F7,     TRNS,   TRNS,   TRNS,   TRNS, \
         TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS,   TRNS  \
     )
 };
@@ -130,7 +130,9 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Fn action definition
  */
 static const uint16_t PROGMEM fn_actions[] = {
-    [0] = ACTION_LAYER_MOMENTARY(1)
+    [0] = ACTION_LAYER_MOMENTARY(1),
+    [1] = ACTION_LAYER_TOGGLE(1),
+    [2] = ACTION_LAYER_MOMENTARY(3),
 };
 #endif
 
