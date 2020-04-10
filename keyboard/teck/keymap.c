@@ -110,8 +110,8 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ENT,    QUOT,   DOT,    COMM,   M,      B,      V,      N,      LCTRL,  C,      Z,      X,      TAB, \
         LBRC,   P,      O,      I,      U,      T,      R,      Y,      DEL,    E,      Q,      W,      SLASH, \
         RSFT,   SCLN,   L,      K,      J,      G,      F,      H,      U,      D,      A,      S,      LSFT, \
-        EQL,    RBRC,   S,      D,      F,      FN1,    TAB,    FN2,    FN0,    K,      BSLS,   ESC,    ESC, \
-        TAB,    VOLU,   VOLD,   MUTE,   MNXT,   F6,     BSPC,   MPLY,   MPRV,   LGUI,   DOWN,   UP,     RIGHT, \
+        EQL,    RBRC,   S,      D,      F,      CALC,   TAB,    PSCR,   FN0,    K,      BSLS,   ESC,    ESC, \
+        TAB,    VOLU,   VOLD,   MUTE,   MNXT,   F6,     F5,     MPLY,   MPRV,   LGUI,   DOWN,   UP,     RIGHT, \
         MINS,   0,      9,      8,      7,      5,      4,      6,      LGUI,   3,      1,      2,      GRV  \
     ),
     /* 1: first FN layer */
